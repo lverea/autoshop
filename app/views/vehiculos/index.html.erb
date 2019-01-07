@@ -1,1 +1,8 @@
+<h1> Vehículos </h1>
 <%= link_to "Vender vehiculo", new_vehiculo_path %>
+<div id="vehiculos">
+<% @vehiculos.each do |v| %>
+	<h2><%= link_to v.dominio, v %></h2>
+	<p><%= v.descripcion %></p>
+	<% end %>
+</div>

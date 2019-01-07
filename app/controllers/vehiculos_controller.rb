@@ -1,5 +1,6 @@
 class VehiculosController < ApplicationController
 	def index
+		@vehiculos= Vehiculo.all
 	end
 	
 	def new

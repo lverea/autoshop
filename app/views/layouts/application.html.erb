@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Autoshop</title>
+    <title>
+		<% if content_for?(:title) %>
+			<%= yield(:title) %>
+		<% else %>
+			Autoshop
+		<% end %>
+	</title>
+	
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all'%>

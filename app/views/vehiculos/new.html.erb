@@ -1,0 +1,13 @@
+<h1>Nuevo vehículo </h1>
+<%= form_for(@vehiculo) do |f| %>
+	<p>
+	<%= f.label :dominio %><br>
+	<%= f.text_field :dominio %>
+	</p>
+	<p>
+	<%= f.label :descripcion , "Descripción" %><br>
+	<%= f.text_field :descripcion %>
+	</p>
+	
+	<%= f.submit "Terminar" %>
+<% end %>

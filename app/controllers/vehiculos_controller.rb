@@ -12,6 +12,8 @@ class VehiculosController < ApplicationController
 			flash[:notice] = "Vehículo creado."
 			redirect_to @vehiculo
 		else
+			flash.now[:alert] = "Vehículo no creado."
+			render "new"
 		end
 	end
 	

@@ -7,7 +7,7 @@ RSpec.feature "Usuarios pueden crear vehiculos" do
 	
 	scenario "con atributos válidos" do
 		fill_in "Dominio", with: "ICN708"
-		fill_in "Descripción", with: "Chevrolet Aveo muy bueno!"
+		fill_in "vehiculo_descripcion", with: "Chevrolet Aveo muy bueno!"
 		click_button "Guardar"
 		expect(page).to have_content "Vehículo creado."
 	end

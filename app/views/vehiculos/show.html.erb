@@ -1,3 +1,4 @@
 <% title(@vehiculo.dominio,"Vehiculo") %>
 <h1><%= @vehiculo.dominio %></h1>
+<%= link_to "Modificar", edit_vehiculo_path(@vehiculo) %>
 <p><%= @vehiculo.descripcion %></p>

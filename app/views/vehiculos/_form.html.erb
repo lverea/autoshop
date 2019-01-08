@@ -1,0 +1,22 @@
+<%= form_for(vehiculo) do |f| %>
+	<% if vehiculo.errors.any? %>
+		<div id="error_explanation">
+		<h2><%= pluralize(vehiculo.errors.count,"error") %> no permiten que el vehiculo se guarde:</h2>
+			<ul><%vehiculo.errors.full_messages.each do |msg| %>
+				<li><%= msg %></li>
+				<%end %>
+			</ul>
+		</div>
+	<% end %>
+			
+	<p>
+	<%= f.label :dominio %><br>
+	<%= f.text_field :dominio %>
+	</p>
+	<p>
+	<%= f.label :descripcion , "Descripción" %><br>
+	<%= f.text_field :descripcion %>
+	</p>
+	
+	<%= f.submit "Guardar" %>
+<% end %>

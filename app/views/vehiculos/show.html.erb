@@ -1,4 +1,9 @@
-<% title(@vehiculo.dominio,"Vehiculo") %>
-<h1><%= @vehiculo.dominio %></h1>
-<%= link_to "Modificar", edit_vehiculo_path(@vehiculo) %>
+<div class="page-header"><% title(@vehiculo.dominio,"Vehiculo") %></div>	
+	<h1><%= @vehiculo.dominio %></h1>
+	<ul class="actions">
+		<li>
+			<%= link_to  fa_icon("pencil") + " Modificar", edit_vehiculo_path(@vehiculo), class: "btn btn-primary" %>
+		</li>
+	</ul>
+</div>
 <p><%= @vehiculo.descripcion %></p>

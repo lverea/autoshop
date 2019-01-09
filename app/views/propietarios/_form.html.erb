@@ -1,0 +1,6 @@
+
+<%= simple_form_for([vehiculo,propietario]) do |f| %>
+	<%= f.input :nombre %>
+	<%= f.input :celular%><br>
+	<%= f.button :submit, "Guardar", class:"btn-primary" %>
+<% end %>

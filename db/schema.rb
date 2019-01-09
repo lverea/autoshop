@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190107141120) do
+ActiveRecord::Schema.define(version: 20190108212143) do
+
+  create_table "propietarios", force: :cascade do |t|
+    t.string "nombre"
+    t.string "celular"
+    t.integer "vehiculo_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["vehiculo_id"], name: "index_propietarios_on_vehiculo_id"
+  end
 
   create_table "vehiculos", force: :cascade do |t|
     t.string "dominio"
